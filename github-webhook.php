@@ -1,6 +1,6 @@
 <?php
 $TARGET = 'home/hqqqh7h7lc3p/public_html'; // The path to the directory containing your repo
-$SECRET_KEY = 'Yahashvi@123'; // Use the same secret as in the GitHub webhook settings
+$SECRET_KEY = '9d02f39115cd463282592f3eaef2cfeae9a0163198830a1cc595ea3cdc14d87f'; // Use the same secret as in the GitHub webhook settings
 $signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
 
 // Collect the data from the request
