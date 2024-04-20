@@ -1,0 +1,639 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Zaiproty - A property management system is software designed to help property owners, managers, and landlords streamline the process of managing their properties. It provides a centralized platform for tasks such as tenant screening, rent collection, maintenance requests, and financial reporting. The goal of a property management system is to increase efficiency, reduce costs, and enhance the overall experience for both property owners and tenants.">
+      
+      
+      
+        <meta name="author" content="zainiklab">
+      
+      
+      <link rel="icon" href="assets/img/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Agreement addon - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#digital_agreement_docusign" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="assets/img/logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Agreement <span class='badge bg-danger'>addon</span>
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="assets/img/logo-white.png" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started.html" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="admin.html" class="md-nav__link">
+        Admin <span class='badge bg-danger'>addon</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bulk-sms.html" class="md-nav__link">
+        Bulk Sms/Mail <span class='badge bg-danger'>addon</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Agreement <span class='badge bg-danger'>addon</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="agreement.html" class="md-nav__link md-nav__link--active">
+        Agreement <span class='badge bg-danger'>addon</span>
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#admin_panel" class="md-nav__link">
+    Admin Panel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owner_panel" class="md-nav__link">
+    Owner panel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tenant_panel" class="md-nav__link">
+    Tenant panel
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="listing.html" class="md-nav__link">
+        Listing <span class='badge bg-danger'>addon</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="owner.html" class="md-nav__link">
+        Owner Panel
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tenant.html" class="md-nav__link">
+        Tenant Panel
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="maintainer.html" class="md-nav__link">
+        Maintainer Panel
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq.html" class="md-nav__link">
+        Faq
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="others.html" class="md-nav__link">
+        Others
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="change-Log.html" class="md-nav__link">
+        Change Log
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="addon-install.html" class="md-nav__link">
+        Addon Install
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="addon-install-manually.html" class="md-nav__link">
+        Addon Manually Install
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="version-update.html" class="md-nav__link">
+        Version Update
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#admin_panel" class="md-nav__link">
+    Admin Panel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owner_panel" class="md-nav__link">
+    Owner panel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tenant_panel" class="md-nav__link">
+    Tenant panel
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="digital_agreement_docusign">Digital Agreement (<a href="https://www.docusign.com/">DocuSign</a>)<a class="headerlink" href="#digital_agreement_docusign" title="Permanent link">&para;</a></h1>
+<h2 id="admin_panel">Admin Panel<a class="headerlink" href="#admin_panel" title="Permanent link">&para;</a></h2>
+<p>For this feature, firstly users have to do some settings in admin. Go to admin settings. Below there is the agreement setting.</p>
+<p><img alt="Image" src="images/agreement/admin-setting.png" /></p>
+<p>There are some input fields named Status, DS Client Id / Integration Key, DS User Id and DS Private Key (RSA Private Key).</p>
+<p>Change the status from disabled to enable. For the others input field, you have to create account from here ( https://account-d.docusign.com )</p>
+<p>Create a free account or login into <a href="https://www.docusign.com/">DocuSign</a>. Click the settings category.</p>
+<p><img alt="Image" src="images/agreement/image4.png" /></p>
+<p>Below there is a category named ‘apps and keys’. Go to this page.</p>
+<p><img alt="Image" src="images/agreement/image11.png" /></p>
+<p>From the ‘My account information’ section, you get your user id. Then click the ‘app add and integration key’.</p>
+<p><img alt="Image" src="images/agreement/image10.png" /></p>
+<p>Create your project name and click the create button.</p>
+<p><img alt="Image" src="images/agreement/image9.png" /></p>
+<p>Here you will get your integration key. Save it in a secure place.</p>
+<p><img alt="Image" src="images/agreement/image13.png" /></p>
+<p>Now go a little below the page. You will see the secret key and RSA key pairs button. Click the buttons and create your key and id. Save your keys and id in a secure place because it shows only one at a time.</p>
+<p><img alt="Image" src="images/agreement/image8.png" /></p>
+<p>In additional settings, you have to put your redirect uri. URI for this project will be {root}/admin/agreement/callback. Root means your website address. For example</p>
+<p>https://zaiproperty.zainikthemes.com/admin/agreement/callback</p>
+<p><img alt="Image" src="images/agreement/image5.png" /></p>
+<p>Now click the save button. In the list, there is an action column. You can edit or view in detail.</p>
+<p><img alt="Image" src="images/agreement/image6.png" /></p>
+<p>Now put these values in the input field and update the settings. After that click the request allow button.</p>
+<p><img alt="Image" src="images/agreement/image15.png" /></p>
+<p>When you click this button, it will redirect you to the <a href="https://www.docusign.com/">docusign</a> login page. Login to <a href="https://www.docusign.com/">docusign</a> and you will get an allowed access page.</p>
+<p><img alt="Image" src="images/agreement/image14.png" /></p>
+<p>Click the allow button and it will successfully redirect to the admin settings page.</p>
+<p>Now the admin can send a test agreement.</p>
+<p>Click the <b>Test send</b> button. A pop up will appear.</p>
+<p><img alt="Image" src="images/agreement/image12.png" /></p>
+<p>Put a valid email, receiver name and upload the required file. Check the email.</p>
+<h2 id="owner_panel">Owner panel<a class="headerlink" href="#owner_panel" title="Permanent link">&para;</a></h2>
+<p>In the owner panel, the owner can send an agreement to his tenant. Click the ‘New agreement’ button.</p>
+<p><img alt="Image" src="images/agreement/image1.png" /></p>
+<p>Select your tenant and upload the file and click the send button.</p>
+<p><img alt="Image" src="images/agreement/image7.png" /></p>
+<p>After that the list will be added to the table. Owner can also download the file.</p>
+<p><img alt="Image" src="images/agreement/image2.png" /></p>
+<h2 id="tenant_panel">Tenant panel<a class="headerlink" href="#tenant_panel" title="Permanent link">&para;</a></h2>
+<p>In the tenant panel, the tenant can download an agreement. Click the ‘download arrow’ button.</p>
+<p><img alt="Image" src="images/agreement/tenant-panel-list.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="bulk-sms.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Bulk Sms/Mail &lt;span class=&#39;badge bg-danger&#39;&gt;addon&lt;/span&gt;" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Bulk Sms/Mail <span class='badge bg-danger'>addon</span>
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="listing.html" class="md-footer__link md-footer__link--next" aria-label="Next: Listing &lt;span class=&#39;badge bg-danger&#39;&gt;addon&lt;/span&gt;" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Listing <span class='badge bg-danger'>addon</span>
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022-2023 Zaiproty | Zainiktheme All Right Reserved
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.76f349be.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

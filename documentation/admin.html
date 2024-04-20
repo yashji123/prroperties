@@ -1,0 +1,899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Zaiproty - A property management system is software designed to help property owners, managers, and landlords streamline the process of managing their properties. It provides a centralized platform for tasks such as tenant screening, rent collection, maintenance requests, and financial reporting. The goal of a property management system is to increase efficiency, reduce costs, and enhance the overall experience for both property owners and tenants.">
+      
+      
+      
+        <meta name="author" content="zainiklab">
+      
+      
+      <link rel="icon" href="assets/img/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Admin addon - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#admin_account_activities" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="assets/img/logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Admin <span class='badge bg-danger'>addon</span>
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="assets/img/logo-white.png" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started.html" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Admin <span class='badge bg-danger'>addon</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="admin.html" class="md-nav__link md-nav__link--active">
+        Admin <span class='badge bg-danger'>addon</span>
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how_to_manage_the_admin_panel" class="md-nav__link">
+    How to manage the admin  panel?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin_dashboard" class="md-nav__link">
+    Admin Dashboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all_orders" class="md-nav__link">
+    All Orders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owner_packages" class="md-nav__link">
+    Owner Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owner" class="md-nav__link">
+    Owner
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic_setting" class="md-nav__link">
+    Basic Setting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color_settings" class="md-nav__link">
+    Color Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    Language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#currency" class="md-nav__link">
+    Currency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment_gateway" class="md-nav__link">
+    Payment Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smtp_setting" class="md-nav__link">
+    SMTP Setting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#landing_page_setting" class="md-nav__link">
+    Landing Page Setting :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    Profile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my_profile" class="md-nav__link">
+    My Profile
+  </a>
+  
+    <nav class="md-nav" aria-label="My Profile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change_password" class="md-nav__link">
+    Change Password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language_and_notification" class="md-nav__link">
+    Language and notification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bulk-sms.html" class="md-nav__link">
+        Bulk Sms/Mail <span class='badge bg-danger'>addon</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agreement.html" class="md-nav__link">
+        Agreement <span class='badge bg-danger'>addon</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="listing.html" class="md-nav__link">
+        Listing <span class='badge bg-danger'>addon</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="owner.html" class="md-nav__link">
+        Owner Panel
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tenant.html" class="md-nav__link">
+        Tenant Panel
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="maintainer.html" class="md-nav__link">
+        Maintainer Panel
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq.html" class="md-nav__link">
+        Faq
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="others.html" class="md-nav__link">
+        Others
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="change-Log.html" class="md-nav__link">
+        Change Log
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="addon-install.html" class="md-nav__link">
+        Addon Install
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="addon-install-manually.html" class="md-nav__link">
+        Addon Manually Install
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="version-update.html" class="md-nav__link">
+        Version Update
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how_to_manage_the_admin_panel" class="md-nav__link">
+    How to manage the admin  panel?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin_dashboard" class="md-nav__link">
+    Admin Dashboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all_orders" class="md-nav__link">
+    All Orders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owner_packages" class="md-nav__link">
+    Owner Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#owner" class="md-nav__link">
+    Owner
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic_setting" class="md-nav__link">
+    Basic Setting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color_settings" class="md-nav__link">
+    Color Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
+    Language
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#currency" class="md-nav__link">
+    Currency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment_gateway" class="md-nav__link">
+    Payment Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smtp_setting" class="md-nav__link">
+    SMTP Setting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#landing_page_setting" class="md-nav__link">
+    Landing Page Setting :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    Profile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my_profile" class="md-nav__link">
+    My Profile
+  </a>
+  
+    <nav class="md-nav" aria-label="My Profile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#change_password" class="md-nav__link">
+    Change Password
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#language_and_notification" class="md-nav__link">
+    Language and notification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="admin_account_activities">Admin Account Activities<a class="headerlink" href="#admin_account_activities" title="Permanent link">&para;</a></h1>
+<h2 id="how_to_manage_the_admin_panel">How to manage the admin  panel?<a class="headerlink" href="#how_to_manage_the_admin_panel" title="Permanent link">&para;</a></h2>
+<p>Follow the below steps to manage your admin panel</p>
+<p>Credentials For Demo</p>
+<div class="codehilite"><pre><span></span><code><span class="k">For</span><span class="w"> </span><span class="k">Admin</span><span class="w"> </span><span class="nl">Panel</span><span class="p">:</span><span class="w"> </span><span class="n">Email</span><span class="w"> </span><span class="k">admin</span><span class="nv">@gmail</span><span class="p">.</span><span class="n">com</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="mf">123456.</span><span class="w"></span>
+</code></pre></div>
+
+<h2 id="admin_dashboard">Admin Dashboard<a class="headerlink" href="#admin_dashboard" title="Permanent link">&para;</a></h2>
+<p>Admin can see all the information, key points, and list from here. The navigation system is on the left side. Language system, notification and admin profile is on the right side of the top panel.</p>
+<p><img alt="Image" src="images/admin/dashboard-1.png" /></p>
+<h2 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">&para;</a></h2>
+<p>Admin can create packages from here as well as manage all the packages.</p>
+<p><img alt="Image" src="images/admin/package.png" /></p>
+<p>Clicking the Add Package button, admin is able to create a new package. Admin can also edit and delete the package.</p>
+<h2 id="all_orders">All Orders<a class="headerlink" href="#all_orders" title="Permanent link">&para;</a></h2>
+<p>Admin can see the All Owner Orders list from this section. The order list is divided some tabs called All Order, Paid, Pending, Bank Pending and Canceled Order.</p>
+<p><img alt="Image" src="images/admin/all-order.png" /></p>
+<h2 id="owner_packages">Owner Packages<a class="headerlink" href="#owner_packages" title="Permanent link">&para;</a></h2>
+<p>Admin can see all Owner Packages list from this section.</p>
+<p><img alt="Image" src="images/admin/owner-package.png" /></p>
+<h2 id="owner">Owner<a class="headerlink" href="#owner" title="Permanent link">&para;</a></h2>
+<p>Admin can see all the owners from this section.</p>
+<p><img alt="Image" src="images/admin/owner.png" /></p>
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<p>Admin Can change Settings of the website from this setting section.</p>
+<h3 id="basic_setting">Basic Setting<a class="headerlink" href="#basic_setting" title="Permanent link">&para;</a></h3>
+<p>Admin can change Basic Setting like App Setting, SEO Setting, Card Data Show, Send Email Status, Google Setting from Basic Setting Section.</p>
+<p><img alt="Image" src="images/admin/basic-setting.png" /></p>
+<h3 id="color_settings">Color Settings<a class="headerlink" href="#color_settings" title="Permanent link">&para;</a></h3>
+<p>Admin can change basic colors of the website from the Color Setting option.</p>
+<p><img alt="Image" src="images/admin/color-setting.png" /></p>
+<h3 id="language">Language<a class="headerlink" href="#language" title="Permanent link">&para;</a></h3>
+<p>Admin can change Language options. Clicking Add Language, admin can add more language. In the action column of the list table, admin can edit, delete and translate the language.</p>
+<p><img alt="Image" src="images/admin/language.png" /></p>
+<h3 id="currency">Currency<a class="headerlink" href="#currency" title="Permanent link">&para;</a></h3>
+<p>Currency can be set from the Currency setting option.</p>
+<p><img alt="Image" src="images/admin/currency.png" /></p>
+<h3 id="payment_gateway">Payment Gateway<a class="headerlink" href="#payment_gateway" title="Permanent link">&para;</a></h3>
+<p>Admin can update the payment gateway from this setting.</p>
+<p><img alt="Image" src="images/admin/gateway.png" /></p>
+<p>Admin can enable / disable the payment gateway. They need to update the credentials from here.</p>
+<ul>
+<li>
+<p>Add the key for the desire gateway</p>
+</li>
+<li>
+<p>Add the secret for the desire gateway</p>
+</li>
+<li>
+<p>You can add multiple currencies from here which need to be supported by your gateway. For every currency you have to add the conversion rate.</p>
+</li>
+</ul>
+<h3 id="smtp_setting">SMTP Setting<a class="headerlink" href="#smtp_setting" title="Permanent link">&para;</a></h3>
+<p>Admin Can update the email configuration from setting option.</p>
+<p><img alt="Image" src="images/admin/smtp-setting.png" /></p>
+<h2 id="landing_page_setting">Landing Page Setting :<a class="headerlink" href="#landing_page_setting" title="Permanent link">&para;</a></h2>
+<p>Admin can add, update as well as change of landing page from this section.</p>
+<p><img alt="Image" src="images/admin/landing-page-setting.png" /></p>
+<h2 id="profile">Profile<a class="headerlink" href="#profile" title="Permanent link">&para;</a></h2>
+<h2 id="my_profile">My Profile<a class="headerlink" href="#my_profile" title="Permanent link">&para;</a></h2>
+<p>In Profile section, Admin can go to My profile section and change basic information about admin’s Profile.</p>
+<p><img alt="Image" src="images/admin/profile.png" /></p>
+<h3 id="change_password">Change Password<a class="headerlink" href="#change_password" title="Permanent link">&para;</a></h3>
+<p>Admin can change the password of his profile from here.</p>
+<p><img alt="Image" src="images/admin/change-password.png" /></p>
+<h3 id="language_and_notification">Language and notification<a class="headerlink" href="#language_and_notification" title="Permanent link">&para;</a></h3>
+<p>Admin can change language and get notification too.</p>
+<p><img alt="Image" src="images/admin/notification.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="getting-started.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Getting Started
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="bulk-sms.html" class="md-footer__link md-footer__link--next" aria-label="Next: Bulk Sms/Mail &lt;span class=&#39;badge bg-danger&#39;&gt;addon&lt;/span&gt;" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Bulk Sms/Mail <span class='badge bg-danger'>addon</span>
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022-2023 Zaiproty | Zainiktheme All Right Reserved
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.76f349be.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

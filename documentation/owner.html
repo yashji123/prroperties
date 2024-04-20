@@ -1,0 +1,1335 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Zaiproty - A property management system is software designed to help property owners, managers, and landlords streamline the process of managing their properties. It provides a centralized platform for tasks such as tenant screening, rent collection, maintenance requests, and financial reporting. The goal of a property management system is to increase efficiency, reduce costs, and enhance the overall experience for both property owners and tenants.">
+      
+      
+      
+        <meta name="author" content="zainiklab">
+      
+      
+      <link rel="icon" href="assets/img/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Owner Panel - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="assets/css/custom.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#owner_account_activities" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="assets/img/logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Owner Panel
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  <img src="assets/img/logo-white.png" alt="logo">
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="getting-started.html" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="admin.html" class="md-nav__link">
+        Admin <span class='badge bg-danger'>addon</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bulk-sms.html" class="md-nav__link">
+        Bulk Sms/Mail <span class='badge bg-danger'>addon</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agreement.html" class="md-nav__link">
+        Agreement <span class='badge bg-danger'>addon</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="listing.html" class="md-nav__link">
+        Listing <span class='badge bg-danger'>addon</span>
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Owner Panel
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="owner.html" class="md-nav__link md-nav__link--active">
+        Owner Panel
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#owner_dashboard" class="md-nav__link">
+    Owner Dashboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all_property" class="md-nav__link">
+    All Property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_property" class="md-nav__link">
+    Add Property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property_information" class="md-nav__link">
+    Property Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property_location" class="md-nav__link">
+    Property location
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_unit" class="md-nav__link">
+    Add Unit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rent_charges" class="md-nav__link">
+    Rent &amp; Charges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    Image
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tenant" class="md-nav__link">
+    Tenant
+  </a>
+  
+    <nav class="md-nav" aria-label="Tenant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add_tenant" class="md-nav__link">
+    Add Tenant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenants_history" class="md-nav__link">
+    Tenants History
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#billing_center" class="md-nav__link">
+    Billing Center
+  </a>
+  
+    <nav class="md-nav" aria-label="Billing Center">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all_invoices" class="md-nav__link">
+    All Invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recurring_invoices" class="md-nav__link">
+    Recurring Invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recurring_setting_add_form" class="md-nav__link">
+    Recurring setting add form
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expenses" class="md-nav__link">
+    Expenses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documents" class="md-nav__link">
+    Documents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information" class="md-nav__link">
+    Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintainer" class="md-nav__link">
+    Maintainer
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintenance_request" class="md-nav__link">
+    Maintenance Request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ticket" class="md-nav__link">
+    Ticket
+  </a>
+  
+    <nav class="md-nav" aria-label="Ticket">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notice_board" class="md-nav__link">
+    Notice Board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report" class="md-nav__link">
+    Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#earning" class="md-nav__link">
+    Earning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expenses_1" class="md-nav__link">
+    Expenses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting" class="md-nav__link">
+    Setting
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#payment_gateway" class="md-nav__link">
+    Payment Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expenses_type" class="md-nav__link">
+    Expenses Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticket_topic" class="md-nav__link">
+    Ticket Topic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tax_settings" class="md-nav__link">
+    Tax Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invoice_type" class="md-nav__link">
+    Invoice Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document_config" class="md-nav__link">
+    Document Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance_issue" class="md-nav__link">
+    Maintenance Issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    Profile
+  </a>
+  
+    <nav class="md-nav" aria-label="Profile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#profile_1" class="md-nav__link">
+    Profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_password" class="md-nav__link">
+    Change Password
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my_subscription" class="md-nav__link">
+    My Subscription
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tenant.html" class="md-nav__link">
+        Tenant Panel
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="maintainer.html" class="md-nav__link">
+        Maintainer Panel
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faq.html" class="md-nav__link">
+        Faq
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="others.html" class="md-nav__link">
+        Others
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="change-Log.html" class="md-nav__link">
+        Change Log
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="addon-install.html" class="md-nav__link">
+        Addon Install
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="addon-install-manually.html" class="md-nav__link">
+        Addon Manually Install
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="version-update.html" class="md-nav__link">
+        Version Update
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#owner_dashboard" class="md-nav__link">
+    Owner Dashboard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all_property" class="md-nav__link">
+    All Property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_property" class="md-nav__link">
+    Add Property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property_information" class="md-nav__link">
+    Property Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property_location" class="md-nav__link">
+    Property location
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_unit" class="md-nav__link">
+    Add Unit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rent_charges" class="md-nav__link">
+    Rent &amp; Charges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image" class="md-nav__link">
+    Image
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tenant" class="md-nav__link">
+    Tenant
+  </a>
+  
+    <nav class="md-nav" aria-label="Tenant">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add_tenant" class="md-nav__link">
+    Add Tenant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tenants_history" class="md-nav__link">
+    Tenants History
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#billing_center" class="md-nav__link">
+    Billing Center
+  </a>
+  
+    <nav class="md-nav" aria-label="Billing Center">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all_invoices" class="md-nav__link">
+    All Invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recurring_invoices" class="md-nav__link">
+    Recurring Invoices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recurring_setting_add_form" class="md-nav__link">
+    Recurring setting add form
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expenses" class="md-nav__link">
+    Expenses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documents" class="md-nav__link">
+    Documents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information" class="md-nav__link">
+    Information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintainer" class="md-nav__link">
+    Maintainer
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintenance_request" class="md-nav__link">
+    Maintenance Request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ticket" class="md-nav__link">
+    Ticket
+  </a>
+  
+    <nav class="md-nav" aria-label="Ticket">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notice_board" class="md-nav__link">
+    Notice Board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#report" class="md-nav__link">
+    Report
+  </a>
+  
+    <nav class="md-nav" aria-label="Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#earning" class="md-nav__link">
+    Earning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expenses_1" class="md-nav__link">
+    Expenses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting" class="md-nav__link">
+    Setting
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#payment_gateway" class="md-nav__link">
+    Payment Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expenses_type" class="md-nav__link">
+    Expenses Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticket_topic" class="md-nav__link">
+    Ticket Topic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tax_settings" class="md-nav__link">
+    Tax Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invoice_type" class="md-nav__link">
+    Invoice Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document_config" class="md-nav__link">
+    Document Config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance_issue" class="md-nav__link">
+    Maintenance Issue
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    Profile
+  </a>
+  
+    <nav class="md-nav" aria-label="Profile">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#profile_1" class="md-nav__link">
+    Profile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change_password" class="md-nav__link">
+    Change Password
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my_subscription" class="md-nav__link">
+    My Subscription
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="owner_account_activities">Owner Account Activities<a class="headerlink" href="#owner_account_activities" title="Permanent link">&para;</a></h1>
+<p>Credentials For Demo</p>
+<div class="codehilite"><pre><span></span><code><span class="k">For</span><span class="w"> </span><span class="n">Owner</span><span class="w"> </span><span class="nl">Panel</span><span class="p">:</span><span class="w"> </span><span class="n">Email</span><span class="w"> </span><span class="n">owner</span><span class="nv">@gmail</span><span class="p">.</span><span class="n">com</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="mf">123456.</span><span class="w"></span>
+</code></pre></div>
+
+<h3 id="owner_dashboard">Owner Dashboard<a class="headerlink" href="#owner_dashboard" title="Permanent link">&para;</a></h3>
+<p>The dashboard is an analysis overview of the entire Zaiproty system and its components. It contains various information, modules and other information related to the information.</p>
+<p><img alt="Image" src="images/owner/dashboard.png" /></p>
+<p>The top row of the dashboard panel has four feature items: total Property, total Units, total Tenants and total maintainers.</p>
+<p><img alt="Image" src="images/owner/dashboard-1.png" /></p>
+<p><b>Total Property:</b> Display the total number of properties of this owner.</p>
+<p><b>Total Units:</b> Display the total number of units of this owner.</p>
+<p><b>Total Tenants:</b> Display the total tenant number of this owner.</p>
+<p><b>Total Maintainers:</b> Display the total maintainer number of this owner.</p>
+<p>In the second row there has a chart where the rent overview (amount) shows the parameter. This will give a general overview of every month.</p>
+<p><img alt="Image" src="images/owner/dashboard-graph.png" /></p>
+<p>The third row has two panels. The one is My Properties and the other is the Tickets list.</p>
+<p><img alt="Image" src="images/owner/dashboard-2.png" /></p>
+<p><b>My properties</b>: Owner can view the property list from this table. This table shows property name, units, available unit, tenant, maintainer. Clicking the view all button will open the property page.</p>
+<p><b>Ticket</b>: Owner can view ticket list from this table. Clicking the view all button will open the ticket page.</p>
+<p>On the upper right side of the header menu there is a drop-down menu of Owner. Clicking this menu will show profile and logout options. Owner can also change language and get notification.</p>
+<p><img alt="Image" src="images/owner/top-right-menu.png" /></p>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<p>There are three sub menus in properties. All Property, Own Property, Lease Property.</p>
+<h3 id="all_property">All Property<a class="headerlink" href="#all_property" title="Permanent link">&para;</a></h3>
+<p>Owner can create property. In the property list the owner can view the details clicking view details. The edit and delete option are in the three-dot button.</p>
+<p><img alt="Image" src="images/owner/property.png" /></p>
+<h3 id="add_property">Add Property<a class="headerlink" href="#add_property" title="Permanent link">&para;</a></h3>
+<p>Owner has to pass five steps to create a property. They are property information, location, unit, rent &amp; charge and image.</p>
+<h3 id="property_information">Property Information<a class="headerlink" href="#property_information" title="Permanent link">&para;</a></h3>
+<p>Firstly, the owner has to select the type of property and then fill in the property name, number of units and description. Click Save &amp; Go to Next button for the next step.</p>
+<p><img alt="Image" src="images/owner/property-details.png" /></p>
+<h3 id="property_location">Property location<a class="headerlink" href="#property_location" title="Permanent link">&para;</a></h3>
+<p>Specify the country, state, city, zip code. Address, and map link of the location.</p>
+<p>Click <b>Save &amp; Go to Next</b> button.</p>
+<p><img alt="Image" src="images/owner/property-location.png" /></p>
+<h3 id="add_unit">Add Unit<a class="headerlink" href="#add_unit" title="Permanent link">&para;</a></h3>
+<p>Specify unit name, number of bedrooms, kitchen, baths and click <b>Save &amp; Go to Next button</b>.</p>
+<p><img alt="Image" src="images/owner/add-unit.png" /></p>
+<h3 id="rent_charges">Rent &amp; Charges<a class="headerlink" href="#rent_charges" title="Permanent link">&para;</a></h3>
+<p>Then this section. Specify general rent, security deposit, late fee, incident receipt and select rent type. When you select a rent type a due day field appears.</p>
+<p><img alt="Image" src="images/owner/rent-charge.png" /></p>
+<p>If you want to put the same charge for all units then put a value in one unit and then select a unit name and select the check marked option named same rent for all units.</p>
+<h3 id="image">Image<a class="headerlink" href="#image" title="Permanent link">&para;</a></h3>
+<p>Add property image and document. Click the done button.</p>
+<p><img alt="Image" src="images/owner/propety-image.png" /></p>
+<p>Your property is created.</p>
+<p><img alt="Image" src="images/owner/propety-list-1.png" /></p>
+<p>Follow the same process for own property and lease property.</p>
+<p>The view page of a property</p>
+<p><img alt="Image" src="images/owner/property-info.png" /></p>
+<h2 id="tenant">Tenant<a class="headerlink" href="#tenant" title="Permanent link">&para;</a></h2>
+<h3 id="add_tenant">Add Tenant<a class="headerlink" href="#add_tenant" title="Permanent link">&para;</a></h3>
+<p>Owner can manage all tenants from this tenant section. This page contains a search option, tenant list and the button of <b>Add tenant</b>. Owner can also edit and view the history of the tenant.</p>
+<p><img alt="Image" src="images/owner/all-tenant.png" /></p>
+<p>For creating a tenant, the owner has to complete three steps. First give the personal information and go <b>next</b>.</p>
+<p><img alt="Image" src="images/owner/tenant-add.png" /></p>
+<p>Second, select the property and rent information is shown according to the property you select. Click the next button.</p>
+<p><img alt="Image" src="images/owner/tenant-add-property.png" /></p>
+<p>And last, give the documentation. (Only image)</p>
+<p><img alt="Image" src="images/owner/tenant-add-image.png" /></p>
+<p>In the view details of a tenant, the owner can close a tenant.</p>
+<p><img alt="Image" src="images/owner/tenant-close.jpg" /></p>
+<h3 id="tenants_history">Tenants History<a class="headerlink" href="#tenants_history" title="Permanent link">&para;</a></h3>
+<p>Owner can see all the detailed information from this section.</p>
+<p><img alt="Image" src="images/owner/tenant-history.PNG" /></p>
+<h2 id="billing_center">Billing Center<a class="headerlink" href="#billing_center" title="Permanent link">&para;</a></h2>
+<h3 id="all_invoices">All Invoices<a class="headerlink" href="#all_invoices" title="Permanent link">&para;</a></h3>
+<p>Owner can create an invoice by clicking <b>New Invoice</b> and also can download invoices in PDF and Excel file. Owner can send a group reminder of all his tenant by clicking <b>Send Group Reminder button</b>.</p>
+<p><img alt="Image" src="images/owner/all-invoice.png" /></p>
+<h3 id="recurring_invoices">Recurring Invoices<a class="headerlink" href="#recurring_invoices" title="Permanent link">&para;</a></h3>
+<p>Owner can setup recurring invoice setting with monthly, yearly and custom. This invoice will automatically generated on that day by using <b>cron</b>.</p>
+<p>All the recurring invoice list</p>
+<p><img alt="Image" src="images/recurring-list.png" /></p>
+<h3 id="recurring_setting_add_form">Recurring setting add form<a class="headerlink" href="#recurring_setting_add_form" title="Permanent link">&para;</a></h3>
+<p><img alt="Image" src="images/recurring-setting.png" /></p>
+<h3 id="expenses">Expenses<a class="headerlink" href="#expenses" title="Permanent link">&para;</a></h3>
+<p>Owner can add different expenses from Expenses section.</p>
+<p>Click on Add New Expenses button and a modal will be opened.</p>
+<p><img alt="Image" src="images/expenses.png" /></p>
+<p>When he will click on Add New Expenses button a modal will be opened .</p>
+<p><img alt="Image" src="images/expenses2.png" /></p>
+<h3 id="documents">Documents<a class="headerlink" href="#documents" title="Permanent link">&para;</a></h3>
+<p>Owner can see the documents uploaded by Tenants.</p>
+<p><img alt="Image" src="images/document.png" /></p>
+<h3 id="information">Information<a class="headerlink" href="#information" title="Permanent link">&para;</a></h3>
+<p>The owner can add information related to their property, such as the location of a nearby school.</p>
+<p><img alt="Image" src="images/information.png" /></p>
+<h2 id="maintainer">Maintainer<a class="headerlink" href="#maintainer" title="Permanent link">&para;</a></h2>
+<p>Owner Can add maintainer by clicking on <b>Add Maintainer</b> button.</p>
+<p><img alt="Image" src="images/owner/maintainer-list.png" /></p>
+<p>When Owner will click on <b>Add Maintainer</b> button the following modal will be opened.</p>
+<p><img alt="Image" src="images/maintainermodal.png" /></p>
+<h3 id="maintenance_request">Maintenance Request<a class="headerlink" href="#maintenance_request" title="Permanent link">&para;</a></h3>
+<p>Owner can send maintenance request to the Maintainer.</p>
+<p><img alt="Image" src="images/owner/maitainer-request.png" /></p>
+<h2 id="ticket">Ticket<a class="headerlink" href="#ticket" title="Permanent link">&para;</a></h2>
+<p>Owner can see the tickets list created by the tenants and also can change the status of the tickets.</p>
+<p><img alt="Image" src="images/owner/ticket-list.png" /></p>
+<h3 id="notice_board">Notice Board<a class="headerlink" href="#notice_board" title="Permanent link">&para;</a></h3>
+<p>Owner can create notice for all tenants and also can edit, delete or see the notice</p>
+<p><img alt="Image" src="images/owner/notice-board.png" /></p>
+<p>when Owner will click on <b>Add New Notice</b> the following modal would be opened.</p>
+<p><img alt="Image" src="images/noticemodal.png" /></p>
+<h2 id="report">Report<a class="headerlink" href="#report" title="Permanent link">&para;</a></h2>
+<h3 id="earning">Earning<a class="headerlink" href="#earning" title="Permanent link">&para;</a></h3>
+<p>Owner can see all the earning reports from this section and can download the report.</p>
+<p><img alt="Image" src="images/owner/report-earning.png" /></p>
+<h3 id="expenses_1">Expenses<a class="headerlink" href="#expenses_1" title="Permanent link">&para;</a></h3>
+<p>Owner can see all the expenses from this section and can download the report.</p>
+<p><img alt="Image" src="images/owner/report-expenses.png" /></p>
+<h2 id="setting">Setting<a class="headerlink" href="#setting" title="Permanent link">&para;</a></h2>
+<p>Owner Can change Setting of the website from setting section</p>
+<h3 id="payment_gateway">Payment Gateway<a class="headerlink" href="#payment_gateway" title="Permanent link">&para;</a></h3>
+<p>Admin can update the payment gateway from this setting.</p>
+<p>Admin can enable / disable the payment gateway. They need to update the credentials from here.</p>
+<p>Add the key for the desire gateway <br />
+Add the secret for the desire gateway <br />
+You can add multiple currencies from here which need to be supported by your gateway. For every currency you have to add the conversion rate. <br /></p>
+<p><img alt="Image" src="images/owner/gateway.png" /></p>
+<h3 id="expenses_type">Expenses Type<a class="headerlink" href="#expenses_type" title="Permanent link">&para;</a></h3>
+<p>Owner can add expenses type from the setting Option.</p>
+<p><img alt="Image" src="images/owner/expenses-type.png" /></p>
+<h3 id="ticket_topic">Ticket Topic<a class="headerlink" href="#ticket_topic" title="Permanent link">&para;</a></h3>
+<p>Owner can add ticket topics from the setting Option.</p>
+<p><img alt="Image" src="images/owner/ticket-topic.png" /></p>
+<h3 id="tax_settings">Tax Settings<a class="headerlink" href="#tax_settings" title="Permanent link">&para;</a></h3>
+<p>Owner can set the tax type from here. (Fixed or percentage.)</p>
+<p><img alt="Image" src="images/owner/tax-setting.png" /></p>
+<h3 id="invoice_type">Invoice Type<a class="headerlink" href="#invoice_type" title="Permanent link">&para;</a></h3>
+<p>Owner can add invoice type from Setting Option.</p>
+<p><img alt="Image" src="images/owner/invoice-type.png" /></p>
+<h3 id="document_config">Document Config<a class="headerlink" href="#document_config" title="Permanent link">&para;</a></h3>
+<p>Owner can add document config from Setting option.</p>
+<p><img alt="Image" src="images/owner/document-config.png" /></p>
+<h3 id="maintenance_issue">Maintenance Issue<a class="headerlink" href="#maintenance_issue" title="Permanent link">&para;</a></h3>
+<p>Owner Can add Maintenance Issue from setting option.
+<img alt="Image" src="images/owner/maitanance-issue.png" /></p>
+<h2 id="profile">Profile<a class="headerlink" href="#profile" title="Permanent link">&para;</a></h2>
+<h3 id="profile_1">Profile<a class="headerlink" href="#profile_1" title="Permanent link">&para;</a></h3>
+<p>In the Profile section, Owner can go to My profile section and change basic information about Owner's Profile.</p>
+<p><img alt="Image" src="images/owner/profile.png" /></p>
+<h3 id="change_password">Change Password<a class="headerlink" href="#change_password" title="Permanent link">&para;</a></h3>
+<p>Owner can change password of his profile from here.</p>
+<p><img alt="Image" src="images/owner/password-change.png" /></p>
+<h2 id="my_subscription">My Subscription<a class="headerlink" href="#my_subscription" title="Permanent link">&para;</a></h2>
+<p>Owner first gets a trial package given from the admin. Owner must upgrade a plan by clicking Upgrade Plan button for more access and can also cancel subscription.</p>
+<p><img alt="Image" src="images/owner/subscription.png" /></p>
+<p>After clicking the <b>Upgrade plan</b> button, a modal arrives and owner can choose a package.</p>
+<p><img alt="Image" src="images/owner/subscripiton-plan.png" /></p>
+<p>Click any Subscribe Now button. Payment section has come and chosen a payment type. Give proper information and click the pay now button. After that you have to wait for a confirmation from admin.</p>
+<p><img alt="Image" src="images/owner/subscription-gateway.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="listing.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Listing &lt;span class=&#39;badge bg-danger&#39;&gt;addon&lt;/span&gt;" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Listing <span class='badge bg-danger'>addon</span>
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="tenant.html" class="md-footer__link md-footer__link--next" aria-label="Next: Tenant Panel" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Tenant Panel
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2022-2023 Zaiproty | Zainiktheme All Right Reserved
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.76f349be.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
