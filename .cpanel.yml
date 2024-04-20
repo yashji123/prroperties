@@ -1,6 +1,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/hqqqh7h7lc3p/public_html/test-prroperties
-    - /bin/cp -R images $DEPLOYPATH
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp * $DEPLOYPATH
+ 
