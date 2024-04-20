@@ -62,7 +62,7 @@ Route::post('/landlord_form', 'App\Http\Controllers\Saas\LandlordForm@store')->n
 //     }
 
 //     return Response::make('Symlink already exists', 400);
-});
+// });
 
 /*
 |--------------------------------------------------------------------------
