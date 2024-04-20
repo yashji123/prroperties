@@ -49,20 +49,20 @@ Route::post('/landlord_form', 'App\Http\Controllers\Saas\LandlordForm@store')->n
 
 
 
-// use Illuminate\Support\Facades\Artisan;
-// use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Response;
 
-// Route::get('/create-symlink', function () {
-//     // Ensure the symlink does not already exist and create it
-//     $target = storage_path('app/public');
-//     $link = public_path('storage');
-//     if (!file_exists($link)) {
-//         symlink($target, $link);
-//         return Response::make('Symlink created', 200);
-//     }
+Route::get('/create-symlink', function () {
+    // Ensure the symlink does not already exist and create it
+    $target = storage_path('app/public');
+    $link = public_path('storage');
+    if (!file_exists($link)) {
+        symlink($target, $link);
+        return Response::make('Symlink created', 200);
+    }
 
-//     return Response::make('Symlink already exists', 400);
-// });
+    return Response::make('Symlink already exists', 400);
+});
 
 /*
 |--------------------------------------------------------------------------
